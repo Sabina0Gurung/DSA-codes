@@ -68,6 +68,23 @@ void inorder(Node *root){
 	printf("%d",root->key);
 	inorder(root->right);
 }
+void preorder(Node *root){
+	if(root == NULL) return;
+	
+	preorder(root->left);
+	printf("%d",root->key);
+	preorder(root->right);
+	
+}
+void postorder(Node *root){
+	if(root == NULL) return;
+	
+	postorder(root->left);
+	printf("%d",root->key);
+	postorder(root->right);
+	
+}
+
 
 int main(){
 	int keys[]={10,20,30,40,50};

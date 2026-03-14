@@ -24,9 +24,9 @@ int attach_to_immediate_child(Node *Node,int key){
 	if(key<Node->key){
 		if(Node->left==NULL){
 			Node->left=newNode(key);
-			return 2;  //attach to left
+			return 1;  //attach to left
 		}else{
-			return -2;  //occupied
+			return -1;  //occupied
 		}
 	}
 	else if(key>Node->key){
